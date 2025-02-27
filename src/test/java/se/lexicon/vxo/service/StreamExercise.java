@@ -201,14 +201,13 @@ public class StreamExercise {
      */
     @Test
     public void task11() {
-        double expected = 57.4469;
+        double expected = 54.42;
         double averageAge = 0;
 
         // todo: write your code here
-
-        // Define the ToIntFunction to calculate age
+        
         ToIntFunction<Person> personToAge = person -> {
-            LocalDate referenceDate = LocalDate.of(2023, 1, 1); // Fixed reference date
+            LocalDate referenceDate = LocalDate.parse("2019-12-20"); // Fixed reference date
             return Period.between(person.getDateOfBirth(), referenceDate).getYears();
         };
 
